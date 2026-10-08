@@ -1,4 +1,4 @@
-# Personal Portfolio for the Database class <at HSBI>
+# Personal Portfolio for the Database class at HSBI
 
 > When you start editing this file, remove this description.
 >
