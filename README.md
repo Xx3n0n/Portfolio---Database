@@ -1,13 +1,20 @@
-# Personal Portfolio for the Database class at HSBI
+# Personal Portfolio for my Database Class 
 
-Portfolio for the Databases course
-in the Mechatronics and Automation degree at HSBI.
+B.Eng Mechatronics and Automation at HSBI (3rd Semester)
 
-## Modules
+The purpose of this repository is to document and record progression in my 3rd semester Database class. Things like reflections, code and exercise tasks will be included in their respective module's folders after the class.
 
-- [Module 1: Introduction and Local-First](module-01/README.md)
-- Module 2: Coming soon
-- Module 3: Coming soon
+Later on a link to the repository for my final project of this class will also be available here.
+
+Author: Abdul Hadi
+
+My pod-mates are [Ian Edgar Arceo](https://github.com/IEdArc08/databases-portfolio) and [Arshia Ziaee](https://github.com/Arshia-zi/Database---Portfolio)
+
+Partners for final project: To be decided...
+
+Our team's final project repository: Coming soon! 
+
+
 
 ## Technologies
 
@@ -16,16 +23,6 @@ in the Mechatronics and Automation degree at HSBI.
 - SQLite
 - DuckDB
 - Git and GitHub
-
-Author: Abdul Hadi
-
-My pod-mates are [Ian Edgar Arceo](https://github.com/IEdArc08/databases-portfolio) and [Arshia Ziaee](https://github.com/Arshia-zi/Database---Portfolio)
-
-Partners for final project: 
-
-To be decided...
-
-Our team final project repository: Coming soon! 
 
 
 ## Table of Contents
