@@ -12,11 +12,28 @@ By the end of this module, you can:
 
 
 
+*Described below is a small description stating how the included tasks helped achive these goals:* 
 
+### 1. Understand the course
 
+**Tasks 1 and 2:** I learned about the course's project-based learning approach, portfolio assessment, and the importance of documenting my progress and reflecting on my learning.
 
+### 2. Set up GitHub
 
+**Tasks 1 and 2:** I created my portfolio repository from the course template, configured `.gitignore`, and practised committing, pushing, and documenting changes using Git and GitHub.
 
+### 3. Set up the toolchain with `uv`
 
+**Task 3:** I configured my Python development environment using `uv`, installed the required dependencies, and verified that the tools were working correctly.
 
+### 4. Understand database types
 
+**Task 4:** I explored the differences between embedded and client/server databases and learned why embedded databases are often a practical choice for local applications.
+
+### 5. Load and query data using SQLite
+
+**Task 5:** I practised loading data into SQLite and querying it from Python, including using bound parameters to handle query inputs safely.
+
+### 6. Verify LLM-generated queries
+
+**Tasks 6 and 7:** I experimented with AI-generated SQL queries and learned the importance of executing, checking, and validating their results rather than automatically trusting the generated output.
