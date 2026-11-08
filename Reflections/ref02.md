@@ -18,7 +18,7 @@ Finishing everything in one night and not having my pod-mates and the professor 
 
 ## Exploration and show stoppers
 
-This whole module was honesty very fun and the challenge of getting everything done before class was thrilling. I am even writing this on the train to uni. How fun?. In all seriousness it was quite fun to learn about these concept and most fun was probably getting the hang of ER diagrams.
+This whole module was honesty very fun and the challenge of getting everything done before class was thrilling. I am even writing this on the train to uni. How fun?. In all seriousness it was quite fun to learn about these concept and most fun was probably getting the hang of ER diagrams. When I got the hang of all the 'keys' it was truly an 'Aha' moment for me.
 
 ## Interaction with peers and instructors
 
@@ -30,4 +30,4 @@ Trying to use AI as the initial self learning tool was the biggest mistake. Late
 
 ## Help and extra work
 
-The only extra help this module was me, myself and I! 
+The only extra help this module was me, myself and I!
