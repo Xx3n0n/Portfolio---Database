@@ -89,7 +89,7 @@ ___
 
 ## Virtual Column `energy_j` proof: 
 
-![proof](pictures\energy_j_proof.png)
+![proof](pictures/energy_j_Proof.png)
 
 # Task 2
 
@@ -110,7 +110,7 @@ The [ingest.py](ingest.py) file can be located in the same folder. Made by ChatG
 
 ## Row-count proof: 
 
-![row_count](pictures\row_count.png)
+![row_count](pictures/row_count.png)
 
 The second block of code checks for duplicate rows and returns nothing.
 
@@ -151,7 +151,7 @@ END;
 
 ## Output: 
 
-![alarm output](pictures\Alarm_trigger.png)
+![alarm output](pictures/Alarm_trigger.png)
 
 
 ## Audit trigger: 
@@ -184,7 +184,7 @@ END;
 
 ## Output: 
 
-![Audit output](pictures\Audit_trigger.png)
+![Audit output](pictures/Audit_trigger.png)
 
 ---
 
