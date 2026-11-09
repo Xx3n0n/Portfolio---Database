@@ -89,7 +89,7 @@ ___
 
 ## Virtual Column `energy_j` proof: 
 
-![proof](pictures\energy_j_Proof.png)
+![proof](pictures\energy_j_proof.png)
 
 # Task 2
 
