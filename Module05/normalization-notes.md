@@ -225,3 +225,79 @@ Both queries ran one after another in alternation to take warm cache into accoun
 
 
 # Round 5
+
+| Design | Dashboard query (ms) | Rows changed by site update | Storage (KB) | Redundancy |
+|---|---:|---:|---:|---|
+| Normalized (3NF) | 0.063488 | 1 | 3976.0 | None |
+| Denormalized | 0.076151 <br> 0.008642*  | 4000 | 10832.0 | Site, technician, price repeated |
+
+*Index dropped.
+
+### Analysis: 
+
+- **Normalized:** Updates only 1 row when a machine's site changes.
+- **Denormalized:** Updates approximately 4,000 rows because machine information is repeated.
+- **Storage:** Denormalization requires more space due to duplicated data.
+- **Indexes:** An index does not always improve performance; a full table scan can sometimes be faster.
+- **Conclusion:** Normalization makes updates safer and reduces duplication, while denormalization can simplify reporting queries at the cost of storage and update performance.
+
+
+# Round 6
+
+I recommend keeping the operational database normalized to 3NF and using a separate denormalized table (`report_jobpart`) for the machine-health dashboard.
+
+The normalized design is better for daily operations because it reduces duplicated data and prevents update, insert and delete anomalies.
+
+The denormalized design can improve dashboard performance because it requires fewer JOIN operations.
+
+However, it requires more storage and creates a risk of outdated or inconsistent information.
+
+To prevent this, I would initially use a scheduled rebuild of the reporting table, so that it regularly receives updated information from the normalized tables.
+
+According to our benchmark, the normalized dashboard query took **[0.860 seconds]**, while the denormalized query took **[0.934 seconds]**.
+
+The denormalized design used **[10,832.0] KB** of storage compared with **[3,976.0] KB** for the normalized design.
+
+Therefore, I would use both designs: 3NF for reliable daily operations and denormalization for faster analytical queries.
+
+
+# Round 7
+
+
+## 1. Why does CROSS JOIN generate 200,000 rows?
+
+A CROSS JOIN combines every row from one table with every row from another table.
+
+In our experiment, 20,000 jobs were combined with 10 parts per job, producing:
+
+20,000 × 10 = 200,000 rows.
+
+## 2. Why is DISTINCT necessary during normalization?
+
+The original flat table contains repeated machine, job and part information.
+
+SELECT DISTINCT removes duplicate combinations when transferring this information into separate normalized tables.
+
+## 3. Why can denormalization improve read performance?
+
+Denormalization combines information from multiple tables into one reporting table. This can reduce the number of joins required by frequently executed queries.
+
+## 4. Why does denormalization increase update costs?
+
+Duplicated information must be updated in every location where it appears. Missing even one copy can create inconsistent data.
+
+## 5. Why can an index make a query slower?
+
+An index introduces additional structures that SQLite may need to scan or access. If the query needs a large proportion of the table, a full table scan can sometimes be cheaper.
+
+## 6. Can database triggers maintain a denormalized reporting table?
+
+Yes. Triggers can automatically execute after INSERT, UPDATE or DELETE operations. They can help synchronize duplicated information, but they also add complexity and write overhead.
+
+## 7. Could DuckDB make denormalization less necessary?
+
+DuckDB is designed for analytical workloads and uses column-oriented storage and vectorized execution. It may execute analytical queries efficiently even when the data is normalized. This would be an interesting comparison with SQLite.
+
+## Final takeaway
+
+Normalization and denormalization solve different problems. Normalization improves data consistency and reduces duplication, while denormalization can simplify and potentially accelerate read-heavy workloads. The correct design depends on actual performance measurements and application requirements.
