@@ -1,6 +1,6 @@
 # Module 2
 
-🎯 Learning Goals
+# 🎯 Learning Goals
 
 This module gives you the opportunity to explore conceptual data modeling and requirements analysis and achieve competency in reading, critiquing, and formalizing a data model.
 
