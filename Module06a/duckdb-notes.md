@@ -1,3 +1,14 @@
+## 🎯 Learning Goals
+
+This module gives you the opportunity to explore analytical (columnar) engines and achieve competency in moving a workload to the right engine.
+
+By the end of this module, you can:
+1. Move a table out of SQLite into **Parquet** reproducibly, from a script.
+2. Run the **same aggregate** in SQLite and DuckDB and report the difference honestly (interleaved runs, median).
+3. Read **`EXPLAIN ANALYZE`** and name the operator and row count that dominate.
+4. State, with a number, **where DuckDB is the wrong engine**.
+5. Recommend **what moves to the analytical copy** and how that copy stays fresh.
+
 **Note:** This module was completed by all 4 pod members together simultaneously in class. Each member was not assigned a specific task or part of the module, we more so handeled all the tasks step by step as a whole group.
 
 
