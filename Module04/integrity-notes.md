@@ -1,6 +1,18 @@
-# Task A 
+## 🎯 Learning Goals
 
-# Observation: 
+This module gives you the opportunity to explore data-definition, manipulation, and integrity and achieve competency in enforcing rules where the data lives.
+
+By the end of this module, you can:
+1. Create tables with the full constraint toolkit: `NOT NULL`, `UNIQUE`, `CHECK`, `PRIMARY KEY`, `FOREIGN KEY`, and `STRICT` typing.
+2. Use **generated columns** to derive values at the engine instead of in application code.
+3. Write **triggers** that enforce domain rules and maintain audit/rollup tables automatically.
+4. Use **DML** correctly — including `UPSERT` (`ON CONFLICT`) for idempotent edge ingestion.
+5. Reason about **access control (DCL)**: who may read or write, and how that maps from server `GRANT`s to an embedded, local-first world.
+
+
+## Task A 
+
+## Observation: 
 
 When unconstrained table was tested SQLite accepted the data without any problem, when constraint were introduced and the 'safe' table was used, the following findings were found for the respective INSERTs: 
 ___
@@ -44,7 +56,7 @@ Error near line 22: UNIQUE constraint failed: t_safe.sensor_id
 ___
 
 
-# Task B 
+## Task B 
 
 Module completed via self study, hence not applicable. Although when compared with another pod's repo (with permission ofcourse) they also had the NULL data as the most surprising part and the rest of their findings were almost identical to mine. 
 
